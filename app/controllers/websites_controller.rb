@@ -13,21 +13,15 @@ class WebsitesController < ApplicationController
   	@website.short = array.sample(4).join
 
   	if @website.save
-  		redirect_to websites_path
+  		redirect_to root_path
   	else
   		render 'new'
   	end
   end
 
   def show
-  	arg = Website.find(params[:id])
-  	if arg
-	  	@website = arg
-	  	redirect_to @website.address
-	else
-	  	@website = Website.find_by(short: "#{params[:id]}")
-	  	redirect_to @website.address
-	end
+		# @website = Website.find(params[:id])
+		# redirect_to @website.address
   end
 
   private
