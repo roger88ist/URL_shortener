@@ -1,8 +1,8 @@
 <h1>HOMEPAGE</h1>
 
 <% @websites.each do |x| %>
-	<p><%= x.address %></p><strong><%= x.short %></strong>
-	<i><%= link_to 'Show', website_path(x) %></i>
+	<p><%= x.address %> "<strong><%= x.short %></strong>"
+	<i><%= link_to 'Show', website_path(x) %></i></p>
 	<br>
 <% end %>
 
