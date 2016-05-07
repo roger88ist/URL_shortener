@@ -3,7 +3,7 @@
 <% @websites.each do |x| %>
 	<p>
 		<strong><%= x.id %>.</strong> <%= x.address %> "<strong><%= x.short %></strong>"
-		<i><%= link_to 'Show', website_path(x) %></i>
+		<i><%= link_to 'Show', website_path(x) , :target => '_blank' %></i>
 	</p>
 <% end %>
 
