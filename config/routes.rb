@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'websites#index'
   get 'websites/index'
+  get '/:id' => 'websites#show'
   resources :websites
   
   # The priority is based upon order of creation: first created -> highest priority.

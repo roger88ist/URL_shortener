@@ -20,8 +20,14 @@ class WebsitesController < ApplicationController
   end
 
   def show
-  	@website = Website.find(params[:id])
-  	redirect_to @website.address
+  	arg = Website.find(params[:id])
+  	if arg
+	  	@website = arg
+	  	redirect_to @website.address
+	else
+	  	@website = Website.find_by(short: "#{params[:id]}")
+	  	redirect_to @website.address
+	end
   end
 
   private
