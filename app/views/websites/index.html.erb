@@ -1,9 +1,14 @@
 <h1>HOMEPAGE</h1>
 
+<% @websites.each do |x| %>
+	<p><%= x.address %></p><strong><%= x.short %></strong>
+	<i><%= link_to 'Show', website_path(x) %></i>
+	<br>
+<% end %>
+
+
+
 <strong><%= link_to 'New Website', new_website_path %></strong>
-
-
-
 
 
 <p>Find me in app/views/websites/index.html.erb</p>
